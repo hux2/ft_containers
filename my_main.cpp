@@ -19,11 +19,18 @@ int main()
 
 	std::stack<int, std::vector<int> >	test;
 	ft::stack<int, std::vector<int> >	my_test;
+	ft::stack<int, std::vector<int> >	copy_test;
+
+	copy_test = my_test;
 
 	test.push(123);
 	my_test.push(42);
+
 	std::cout << test.size() << std::endl;
 	std::cout << my_test.size() << std::endl;
+	std::cout << copy_test.size() << std::endl;
+
+
 	is_empty = my_test.empty();
 	if (is_empty)
 		std::cout << "empty" << std::endl;
