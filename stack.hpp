@@ -1,8 +1,8 @@
 #ifndef FT_STACK
 # define FT_STACK
 
-# include <vector>
-# include <deque>
+# include <vector> //need to delete
+# include <deque> // need to delete
 # include <stack>
 
 namespace ft
@@ -14,7 +14,7 @@ class	stack
 	public :
 		typedef	Container							container_type;
 		typedef	typename container_type::value_type	value_type;
-		typedef typename container_type::size_type	size_type;
+		typedef	typename container_type::size_type	size_type;
 
 	protected :
 		container_type	c;
@@ -32,46 +32,46 @@ class	stack
 
 		template<class _T, class _Container>
 		friend
-		bool	operator== (const stack<T, Container>& __lhs, const stack<T, Container>& __rhs);
+		bool	operator== (const stack<_T, _Container>& __lhs, const stack<_T, _Container>& __rhs);
 
 		template<class _T, class _Container>
 		friend
-		bool	operator< (const stack<T, Container>& __lhs, const stack<T, Container>& __rhs);
+		bool	operator< (const stack<_T, _Container>& __lhs, const stack<_T, _Container>& __rhs);
 
 };
 
-template<class T, class Container>
-bool	operator== (const stack<T, Container>& __lhs, const stack<T, Container>& __rhs)
+template<class _T, class _Container>
+bool	operator== (const stack<_T, _Container>& __lhs, const stack<_T, _Container>& __rhs)
 {
 	return (__lhs.c == __rhs.c);
 }
 
-template<class T, class Container>
-bool	operator!= (const stack<T, Container>& __lhs, const stack<T, Container>& __rhs)
+template<class _T, class _Container>
+bool	operator!= (const stack<_T, _Container>& __lhs, const stack<_T, _Container>& __rhs)
 {
 	return (!(__lhs == __rhs));
 }
 
-template<class T, class Container>
-bool	operator< (const stack<T, Container>& __lhs, const stack<T, Container>& __rhs)
+template<class _T, class _Container>
+bool	operator< (const stack<_T, _Container>& __lhs, const stack<_T, _Container>& __rhs)
 {
 	return (__lhs.c < __rhs.c);
 }
 
-template<class T, class Container>
-bool	operator<= (const stack<T, Container>& __lhs, const stack<T, Container>& __rhs)
+template<class _T, class _Container>
+bool	operator<= (const stack<_T, _Container>& __lhs, const stack<_T, _Container>& __rhs)
 {
 	return (!(__rhs < __lhs));
 }
 
-template<class T, class Container>
-bool	operator> (const stack<T, Container>& __lhs, const stack<T, Container>& __rhs)
+template<class _T, class _Container>
+bool	operator> (const stack<_T, _Container>& __lhs, const stack<_T, _Container>& __rhs)
 {
 	return (__rhs < __lhs);
 }
 
-template<class T, class Container>
-bool	operator>= (const stack<T, Container>& __lhs, const stack<T, Container>& __rhs)
+template<class _T, class _Container>
+bool	operator>= (const stack<_T, _Container>& __lhs, const stack<_T, _Container>& __rhs)
 {
 	return (!(__lhs < __rhs));
 }
