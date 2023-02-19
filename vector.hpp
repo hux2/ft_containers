@@ -1,9 +1,10 @@
 #ifndef FT_VECTOR
 # define FT_VECTOR
 
-#include "vector_test.hpp"
-#include <memory>
+# include "vector_test.hpp"
+# include <memory>
 # include <vector>
+# include <cstddef>
 
 namespace ft
 {
@@ -17,8 +18,8 @@ namespace ft
 			typedef	typename allocator_type::const_reference	const_reference;
 			typedef	typename allocator_type::pointer			pointer;
 			typedef	typename allocator_type::const_pointer		const_pointer;
-			typedef	size_t										size_type;
-			typedef	ptrdiff_t									difference_type;
+			typedef	std::size_t										size_type;
+			typedef	std::ptrdiff_t									difference_type;
 			//iterator;
 			//const_iterator;
 			//reverse_iterator;
