@@ -17,6 +17,7 @@ namespace ft
 		typedef	Reference							reference;
 	};
 
+	//iterator_traits
 	template<class Iter>
 	struct	iterator_traits
 	{
@@ -27,6 +28,7 @@ namespace ft
 		typedef	typename Iter::reference			reference;
 	};
 
+	//specialization for pointer
 	template<class T>
 	struct	iterator_traits<T*>
 	{

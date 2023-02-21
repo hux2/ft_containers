@@ -1,9 +1,8 @@
 #ifndef FT_VECTOR
 # define FT_VECTOR
 
-# include "vector_test.hpp"
+// # include "vector_test.hpp"
 # include <memory>
-# include <vector>
 # include <cstddef>
 
 namespace ft
